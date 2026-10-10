@@ -40,7 +40,7 @@ func converter() {
 func celsiusToFahrenheit() {
 	var F float64
 	var line string
-	fmt.Println("введи температуру в °C: ")
+	fmt.Println("введи температуру в °C:")
 	fmt.Scanln(&line)
 
 	C, err := strconv.ParseFloat(line, 64)
@@ -56,7 +56,7 @@ func celsiusToFahrenheit() {
 func fahrenheitToCelsius() {
 	var C float64
 	var line string
-	fmt.Println("введи температуру в °F: ")
+	fmt.Println("введи температуру в °F:")
 	fmt.Scanln(&line)
 
 	F, err := strconv.ParseFloat(line, 64)
@@ -72,7 +72,7 @@ func fahrenheitToCelsius() {
 func kilometersToMiles() {
 	var kilometers float64
 	var line string
-	fmt.Println("введи количество километров: ")
+	fmt.Println("введи количество километров:")
 	fmt.Scanln(&line)
 
 	kilometers, err := strconv.ParseFloat(line, 64)

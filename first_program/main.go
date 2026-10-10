@@ -7,10 +7,11 @@ import (
 
 func main() {
 	for {
-		fmt.Println("\nВыбери программу:")
-		fmt.Println("1. Угадай число")
-		fmt.Println("2. Конвертер")
-		fmt.Println("0. Выход")
+		fmt.Println("\nвыбери программу:")
+		fmt.Println("1. угадай число")
+		fmt.Println("2. конвертер")
+		fmt.Println("3. генератор паролей")
+		fmt.Println("0. выход")
 
 		var line string
 		fmt.Scanln(&line)
@@ -26,6 +27,8 @@ func main() {
 			guessNumber()
 		case 2:
 			converter()
+		case 3:
+			passwordGenerator()
 		case 0:
 			fmt.Println("пока!")
 			return

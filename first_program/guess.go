@@ -8,11 +8,10 @@ import (
 
 func guessNumber() {
 	fmt.Println("игра «Угадай число»")
-	fmt.Println("я загадал число от 1 до 100, попробуй угадать: ")
+	fmt.Println("я загадал число от 1 до 100, попробуй угадать:")
 
 	attempts := 0
 	randomNum := rand.IntN(100) + 1
-
 	for {
 		var line string
 		fmt.Scanln(&line)
