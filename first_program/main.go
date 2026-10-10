@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	for {
@@ -8,17 +11,24 @@ func main() {
 		fmt.Println("1. Угадай число")
 		fmt.Println("0. Выход")
 
-		var choice int
-		fmt.Scan(&choice)
+		var line string
+		fmt.Scanln(&line)
+
+		choice, err := strconv.Atoi(line)
+
+		if err != nil {
+			fmt.Println("введи номер пункта цифрой")
+			continue
+		}
 
 		switch choice {
 		case 1:
 			guessNumber()
 		case 0:
-			fmt.Println("Пока!")
+			fmt.Println("пока!")
 			return
 		default:
-			fmt.Println("Нет такого пункта")
+			fmt.Println("нет такого пункта")
 		}
 	}
 }
